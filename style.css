@@ -1,26 +1,22 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
   height: 100vh;
   overflow: hidden;
-  font-family: Arial, Helvetica, sans-serif;
   color: white;
 
-  /* Trabzon renkleri animasyon */
-  background: linear-gradient(
-    -45deg,
-    #7a0019,
-    #002f6c,
-    #7a0019,
-    #002f6c
-  );
+  /* Trabzonspor renkleri dalgalı animasyon */
+  background: linear-gradient(270deg, #7a0019, #002f6c, #7a0019, #002f6c);
   background-size: 400% 400%;
-  animation: bgMove 14s ease infinite;
+  animation: bgMove 12s ease infinite;
 }
 
+/* Arka plan animasyonu */
 @keyframes bgMove {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -30,38 +26,44 @@ body {
 /* Yan alanlar */
 .side {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 25%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
-.left { left: 0; }
-.right { right: 0; }
+.left { left: 20px; }
+.right { right: 20px; }
 
 /* Kartlar */
 .card {
-  background: rgba(0,0,0,0.45);
-  padding: 24px 20px;
+  background: rgba(0,0,0,0.5);
+  padding: 20px;
   border-radius: 16px;
   text-align: center;
   backdrop-filter: blur(6px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
 }
 
 .card img {
   width: 150px;
   border-radius: 12px;
-  margin-bottom: 14px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.3s ease;
+}
+
+.card img:hover {
+  transform: scale(1.05);
 }
 
 .card h2 {
-  margin: 0;
-  font-size: 22px;
-  letter-spacing: 1px;
+  margin: 10px 0 5px;
+  font-size: 20px;
 }
 
 .card span {
@@ -69,13 +71,13 @@ body {
   opacity: 0.8;
 }
 
-/* Orta alan */
+/* Ortadaki içerik */
 .center {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.6);
   padding: 40px 50px;
   border-radius: 20px;
   text-align: center;
@@ -85,19 +87,15 @@ body {
 }
 
 .center h1 {
-  margin-bottom: 10px;
+  font-size: 32px;
+  margin-bottom: 15px;
 }
 
 .center p {
-  line-height: 1.6;
+  font-size: 18px;
+  margin-bottom: 20px;
 }
 
-.question {
-  margin-top: 20px;
-  font-weight: bold;
-}
-
-/* Butonlar */
 .buttons {
   margin-top: 20px;
 }
@@ -130,5 +128,5 @@ button {
 #result {
   margin-top: 25px;
   font-size: 18px;
-  line-height: 1.6;
+  line-height: 1.5;
 }
