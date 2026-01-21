@@ -2,19 +2,20 @@ const yesBtn = document.getElementById("yesBtn");
 const noBtn = document.getElementById("noBtn");
 const result = document.getElementById("result");
 
-let yesSize = 1;
+let yesScale = 1;
 
 yesBtn.addEventListener("click", () => {
   result.classList.remove("hidden");
   result.innerHTML = `
-    💙 Sen muazzam bir <b>Trabzonlu</b><br>
-    🏀 Efsane bir <b>Rodman</b> sevdalısı<br>
-    🏎️ Gerçek bir <b>Verstappen</b> destekleyicisi<br><br>
-    Ve şunu bil: <b>ÇOK SEVİLİYORSUN</b> 💙
+    🌊 Ruhuyla <b>Trabzon</b> yaşayan<br>
+    🏀 Çılgınlığıyla <b>Rodman</b> seven<br>
+    🏎️ Tutkusuyla <b>Verstappen</b> destekleyen<br><br>
+    Ve şunu bil:<br>
+    <b>Çok değerlisin. Çok seviliyorsun.</b>
   `;
 });
 
 noBtn.addEventListener("click", () => {
-  yesSize += 0.3;
-  yesBtn.style.transform = `scale(${yesSize})`;
+  yesScale += 0.15;
+  yesBtn.style.transform = `scale(${yesScale})`;
 });
