@@ -1,153 +1,24 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <title>Sana Bir Özür Borçluydum</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <style>
-    body {
-      margin: 0;
-      font-family: "Segoe UI", sans-serif;
-      background: linear-gradient(180deg, #0b0b0b, #141414);
-      color: #f2f2f2;
-      text-align: center;
-      line-height: 1.7;
-    }
-
-    section {
-      padding: 90px 20px;
-      max-width: 820px;
-      margin: auto;
-    }
-
-    h1 {
-      font-size: 2.6rem;
-      margin-bottom: 20px;
-    }
-
-    h2 {
-      font-size: 2rem;
-      color: #ff4d4d;
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-size: 1.15rem;
-      opacity: 0.92;
-    }
-
-    .divider {
-      width: 90px;
-      height: 3px;
-      background: #ff4d4d;
-      margin: 45px auto;
-      border-radius: 10px;
-    }
-
-    .trabzon {
-      background: linear-gradient(135deg, #7a0018, #002f5f);
-      border-radius: 24px;
-      padding: 70px 25px;
-    }
-
-    footer {
-      padding: 40px 20px;
-      font-size: 0.9rem;
-      opacity: 0.6;
-    }
-
-    .fade {
-      animation: fadeIn 1.6s ease forwards;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(25px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>Özür Dilerim</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <!-- GİRİŞ -->
-  <section class="fade">
-    <h1>Sana Bir Özür Borçluydum</h1>
-    <p>
-      Bunu mesajla anlatamazdım.<br />
-      O yüzden yazdım.
-    </p>
-    <div class="divider"></div>
-  </section>
+  <div class="container">
+    <h1>Kalbini kırdım… Özür dilerim 🥺</h1>
+    <p>Beni affediyor musun?</p>
 
-  <!-- NBA / RODMAN -->
-  <section class="fade">
-    <h2>🏀 Dennis Rodman</h2>
-    <p>
-      Rodman hiçbir zaman en çok atan olmadı.<br />
-      Ama hep takım için savaştı.
-    </p>
-    <p>
-      Ben o mücadeleyi senin kalbinde veremedim.<br />
-      Ve bu benim hatam.
-    </p>
-    <div class="divider"></div>
-  </section>
+    <div class="buttons">
+      <button id="yesBtn">Evet</button>
+      <button id="noBtn">Hayır</button>
+    </div>
 
-  <!-- F1 / VERSTAPPEN -->
-  <section class="fade">
-    <h2>🏎️ Max Verstappen</h2>
-    <p>
-      Verstappen bazen sınırı zorlar.<br />
-      Ama hatasını kabul etmeyi bilir.
-    </p>
-    <p>
-      Ben frene geç bastım.<br />
-      Bedelini sen ödedin.
-    </p>
-    <div class="divider"></div>
-  </section>
+    <div id="result" class="hidden"></div>
+  </div>
 
-  <!-- TRABZON -->
-  <section class="trabzon fade">
-    <h2>⚓ Trabzon</h2>
-    <p>
-      Trabzon gibi…<br />
-      Sert rüzgârı var ama kalbi sıcak.
-    </p>
-    <p>
-      Seni kırarak bu derinliği görmezden geldim.<br />
-      Özür dilerim.
-    </p>
-  </section>
-
-  <!-- ÖZÜR -->
-  <section class="fade">
-    <h2>Özür Dilerim</h2>
-    <p>
-      Seni kırdım.<br />
-      Ve bunun bahanesi yok.
-    </p>
-    <p>
-      Affedilir miyim bilmiyorum.<br />
-      Ama susmak istemedim.
-    </p>
-    <div class="divider"></div>
-    <p>
-      Cevap vermek zorunda değilsin.<br />
-      Sadece bilmeni istedim.
-    </p>
-  </section>
-
-  <footer>
-    Bu site senin için yapıldı.
-  </footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
