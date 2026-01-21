@@ -16,7 +16,6 @@ body {
   animation: bgMove 12s ease infinite;
 }
 
-/* Arka plan animasyonu */
 @keyframes bgMove {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -45,7 +44,7 @@ body {
 }
 
 .card img {
-  width: 150px;
+  width: 180px; /* Resimleri biraz büyüttük */
   border-radius: 12px;
   margin-bottom: 10px;
   display: block;

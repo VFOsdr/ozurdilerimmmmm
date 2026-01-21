@@ -7,10 +7,10 @@ let scale = 1;
 yesBtn.addEventListener("click", () => {
   result.classList.remove("hidden");
   result.innerHTML = `
-    🌊 Trabzon sevdalısı<br>
-    🏀 Rodman ruhu<br>
-    🏎️ Verstappen hırsı<br><br>
-    <b>Ve çok seviliyorsun.</b>
+    🌊 Sen muazzzam bir Trabzonlu,<br>
+    🏀 Rodman ruhlu ve<br>
+    🏎️ Verstappen gibi hırslı bir insansın.<br><br>
+    <b>Değerlisin, seviliyorsun!</b>
   `;
 });
 
