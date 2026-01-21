@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap');
-
 * {
   box-sizing: border-box;
 }
@@ -7,57 +5,107 @@
 body {
   margin: 0;
   height: 100vh;
-  background:
-    radial-gradient(circle at top, #1f2933, #0f172a),
-    linear-gradient(135deg, #1e293b, #020617);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Inter', sans-serif;
-  color: #e5e7eb;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+
+  /* Trabzon renkleri animasyon */
+  background: linear-gradient(
+    -45deg,
+    #7a0019,
+    #002f6c,
+    #7a0019,
+    #002f6c
+  );
+  background-size: 400% 400%;
+  animation: bgMove 14s ease infinite;
 }
 
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Yan alanlar */
+.side {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left { left: 0; }
+.right { right: 0; }
+
+/* Kartlar */
 .card {
-  background: rgba(15, 23, 42, 0.85);
-  backdrop-filter: blur(12px);
-  padding: 48px 40px;
+  background: rgba(0,0,0,0.45);
+  padding: 24px 20px;
+  border-radius: 16px;
+  text-align: center;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+}
+
+.card img {
+  width: 150px;
+  border-radius: 12px;
+  margin-bottom: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.card span {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Orta alan */
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.5);
+  padding: 40px 50px;
   border-radius: 20px;
+  text-align: center;
+  backdrop-filter: blur(8px);
   width: 90%;
   max-width: 420px;
-  text-align: center;
-  box-shadow:
-    0 20px 40px rgba(0,0,0,0.5),
-    inset 0 1px 0 rgba(255,255,255,0.05);
 }
 
-h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 36px;
-  margin-bottom: 16px;
+.center h1 {
+  margin-bottom: 10px;
 }
 
-.subtitle {
-  font-size: 15px;
+.center p {
   line-height: 1.6;
-  opacity: 0.85;
-  margin-bottom: 28px;
 }
 
 .question {
-  font-size: 18px;
-  font-weight: 500;
-  margin-bottom: 28px;
+  margin-top: 20px;
+  font-weight: bold;
 }
 
+/* Butonlar */
 .buttons {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
+  margin-top: 20px;
 }
 
 button {
-  font-size: 16px;
-  padding: 14px 28px;
+  font-size: 18px;
+  padding: 12px 28px;
+  margin: 0 10px;
   border-radius: 999px;
   border: none;
   cursor: pointer;
@@ -65,23 +113,14 @@ button {
 }
 
 #yesBtn {
-  background: linear-gradient(135deg, #22c55e, #16a34a);
+  background: #22c55e;
   color: #022c22;
-  box-shadow: 0 8px 20px rgba(34,197,94,0.4);
-}
-
-#yesBtn:hover {
-  transform: scale(1.05);
 }
 
 #noBtn {
   background: transparent;
-  color: #fca5a5;
-  border: 1px solid rgba(252,165,165,0.4);
-}
-
-#noBtn:hover {
-  background: rgba(252,165,165,0.1);
+  color: #fecaca;
+  border: 1px solid #fecaca;
 }
 
 .hidden {
@@ -89,19 +128,7 @@ button {
 }
 
 #result {
-  margin-top: 32px;
-  font-size: 17px;
-  line-height: 1.7;
-  animation: fadeIn 0.6s ease forwards;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  margin-top: 25px;
+  font-size: 18px;
+  line-height: 1.6;
 }
