@@ -10,7 +10,7 @@ body {
   overflow: hidden;
   color: white;
 
-  /* Trabzonspor renkleri dalgalı animasyon */
+  /* Trabzonspor renkleri animasyonlu */
   background: linear-gradient(270deg, #7a0019, #002f6c, #7a0019, #002f6c);
   background-size: 400% 400%;
   animation: bgMove 12s ease infinite;
@@ -23,27 +23,24 @@ body {
   100% { background-position: 0% 50%; }
 }
 
-/* Yan alanlar */
+/* Yan kartlar */
 .side {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 200px;
 }
 
 .left { left: 20px; }
 .right { right: 20px; }
 
-/* Kartlar */
+/* Kart tasarımı */
 .card {
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.6);
   padding: 20px;
   border-radius: 16px;
   text-align: center;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(5px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.5);
 }
 
